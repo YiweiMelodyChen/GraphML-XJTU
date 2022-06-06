@@ -6,9 +6,18 @@
 
 **torch_geometrics**
 
-graph embedding model
+
+
+## Model 
+
+graph embedding model, can be found in torch_geometrics package
 
 - GCN
 - GAT
 - Graph-SAGE
 - RGCN
+
+
+
+## Dataset
+
