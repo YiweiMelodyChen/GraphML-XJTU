@@ -4,7 +4,7 @@ import torch
 import torch.nn.functional as F
 from sklearn.metrics import roc_auc_score
 from torch_geometric.utils import negative_sampling
-from torch_geometric.nn import GCNConv
+from torch_geometric.nn import GCNConv, SAGEConv, GATConv, GraphConv, ARMAConv
 from torch_geometric.utils import train_test_split_edges
 
 G = nx.karate_club_graph()
@@ -17,8 +17,8 @@ data = train_test_split_edges(data)
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.conv1 = GCNConv(data.num_features, 128)
-        self.conv2 = GCNConv(128, 64)
+        self.conv1 = ARMAConv(data.num_features, 128)
+        self.conv2 = ARMAConv(128, 64)
 
     def encode(self):
         x = self.conv1(data.x, data.train_pos_edge_index)
@@ -80,7 +80,7 @@ def test():
 
 
 best_val_perf = test_perf = 0
-output_file = open("./result/karate_gcn.txt", "w")
+output_file = open("./result/karate_arma.txt", "w")
 for epoch in range(1, 31):
     train_loss = train()
     val_perf, tmp_test_perf = test()

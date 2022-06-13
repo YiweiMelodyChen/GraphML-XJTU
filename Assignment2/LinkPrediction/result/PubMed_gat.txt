@@ -1,0 +1,13 @@
+
+Epoch: 0
+----------Train loss: 1.0989 | Train acc: 0.3167  Val loss: 1.0952 |   Val acc: 0.5140
+Epoch: 20
+----------Train loss: 0.8952 | Train acc: 0.8667  Val loss: 0.9556 |   Val acc: 0.7340
+Epoch: 40
+----------Train loss: 0.5546 | Train acc: 0.9333  Val loss: 0.7398 |   Val acc: 0.7520
+Epoch: 60
+----------Train loss: 0.3619 | Train acc: 0.9000  Val loss: 0.6208 |   Val acc: 0.7820
+Epoch: 80
+----------Train loss: 0.2352 | Train acc: 0.9500  Val loss: 0.5932 |   Val acc: 0.7780
+Epoch: 82
+----------Train loss: 0.2410 | Train acc: 0.9500  Val loss: 0.5965 |   Val acc: 0.7660 Test loss: 0.5979 |  Test acc: 0.7610
